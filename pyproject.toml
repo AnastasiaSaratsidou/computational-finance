@@ -1,7 +1,7 @@
 [project]
 name = "computational-finance"
 version = "0.1.0"
-description = "Add your description here"
+description = "Python tools for computational finance, including data analysis, modeling, and visualization."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
