@@ -45,20 +45,18 @@ uv run jupyter notebook option_valuation.ipynb
 
 ```bash
 # Execute the notebook non-interactively and save outputs
-uv run jupyter nbconvert --to notebook --execute option_valuation.ipynb \
-	--ExecutePreprocessor.timeout=600 --output executed_option_valuation.ipynb
+uv run jupyter nbconvert --to notebook --execute option-valuation/option_valuation.ipynb --ExecutePreprocessor.timeout=600 --output executed_option_valuation.ipynb
 ```
 
 Notes:
+- `uv sync` installs dependencies defined in the root project.
 - The interactive command launches the web UI but does not auto-execute cells.
-- Use the `nbconvert --execute` command for CI, batch runs, or to produce a finished
-	notebook with cell outputs saved to `executed_option_valuation.ipynb`.
+- `nbconvert --execute` is useful for CI, reproducibility, and saved outputs. 
 
 ## Structure
 
 ```
 option_valuation/
 ├── option_valuation.ipynb   # Main notebook
-├── pyproject.toml           # Project config
 └── README.md
 ```
