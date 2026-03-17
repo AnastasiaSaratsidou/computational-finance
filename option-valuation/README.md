@@ -35,7 +35,7 @@ European call option on a non-dividend-paying stock:
 uv sync
 
 # Go to the project directory
-cd option_valuation
+cd option-valuation
 
 # Start Jupyter and open the notebook in your browser
 uv run jupyter notebook option_valuation.ipynb
