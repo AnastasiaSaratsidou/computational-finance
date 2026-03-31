@@ -58,8 +58,10 @@ Prices options by expanding the risk-neutral density in a Fourier cosine basis a
 # Install dependencies
 uv sync
 
-# Launch Jupyter
-uv run jupyter notebook
+# Launch Jupyter and open the notebooks
+cd advanced-pricing/notebooks
+uv run jupyter notebook pde_fd_schemes.ipynb
+uv run jupyter notebook fourier_cos_method.ipynb
 ```
 
 Or execute non-interactively:
@@ -72,8 +74,9 @@ uv run jupyter nbconvert --to notebook --execute fourier_cos_method.ipynb --Exec
 ## Structure
 
 ```
-advanced-pricing/
-├── pde_fd_schemes.ipynb       # Finite difference PDE solver
-├── fourier_cos_method.ipynb   # Fourier COS pricer
+mc-sensitivity-analysis/
+├── notebooks/
+│   ├── pde_fd_schemes.ipynb       # Finite difference PDE solver
+│   ├── fourier_cos_method.ipynb   # Fourier COS pricer
 └── README.md
 ```
