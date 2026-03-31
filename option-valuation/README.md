@@ -9,6 +9,7 @@ This project covers option pricing using:
 ## Problem Setup
 
 European call option on a non-dividend-paying stock:
+
 - **Spot Price**: €100
 - **Strike**: €99 (OTM)
 - **Maturity**: 1 year
@@ -28,30 +29,20 @@ European call option on a non-dividend-paying stock:
 
 ## Usage
 
-### Interactive (web UI)
-
 ```bash
 # Install dependencies
 uv sync
 
-# Go to the project directory
+# Launch Jupyter and open the notebook
 cd option-valuation
-
-# Start Jupyter and open the notebook in your browser
 uv run jupyter notebook option_valuation.ipynb
 ```
 
-### Headless / reproducible runs
+Or execute non-interactively:
 
 ```bash
-# Execute the notebook non-interactively and save outputs
 uv run jupyter nbconvert --to notebook --execute option-valuation/option_valuation.ipynb --ExecutePreprocessor.timeout=600 --output executed_option_valuation.ipynb
 ```
-
-Notes:
-- `uv sync` installs dependencies defined in the root project.
-- The interactive command launches the web UI but does not auto-execute cells.
-- `nbconvert --execute` is useful for CI, reproducibility, and saved outputs. 
 
 ## Structure
 
